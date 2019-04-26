@@ -1914,9 +1914,6 @@
     </style>
   </head>
   <body>
-    <script>
-      fbq('track', 'ViewContent');
-    </script>
     <section>
     <div class="container">
       <div class="row">
@@ -1926,7 +1923,13 @@
 
         <div class="col signup">
           <h1 class="title-white"><span class="title-light">ecommerce</span><br>GENOME</h1>
-          <p class="subtitle-white">Get your copy today<br><br><a href="https://www.amazon.com/Ecommerce-Genome-Practical-Launching-Optimizing-ebook/dp/B07QX31RHV/ref=sr_1_fkmrnull_1?keywords=ecommerce+genome&qid=1556221422&s=gateway&sr=8-1-fkmrnull" class="button form-button"><img src="img/logo-amazon.png" style="text-align: center; height: 40px"></a></p>
+          <p class="subtitle-white">Get your copy today<br><br><a id="amazonButton" href="https://www.amazon.com/Ecommerce-Genome-Practical-Launching-Optimizing-ebook/dp/B07QX31RHV/ref=sr_1_fkmrnull_1?keywords=ecommerce+genome&qid=1556221422&s=gateway&sr=8-1-fkmrnull" class="button form-button"><img src="img/logo-amazon.png" style="text-align: center; height: 40px"></a></p>
+          <script type="text/javascript">
+              $('#$amazonButton').click(function() {
+                fbq('track', 'Click Through Amazon');
+                ga('send', 'event', 'Click', 'Click CTA', 'Click Through Amazon');
+              });
+          </script>
         </div><!-- col -->
       </div><!-- row -->
     </div><!-- Container -->
