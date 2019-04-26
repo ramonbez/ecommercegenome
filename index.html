@@ -1889,7 +1889,13 @@ AAAAAAAAAAAAABBZBBZZB        .align-items-xl-end {
             <p>Author @ <a target="_blank" href="ecommerce-genome/index.html">Ecommerce Genome</a><br>
             Writer @ <a target="_blank" href="https://medium.com/@ramonbez">Medium</a><br>
             Founder & Instructor @ <a target="_blank" href="https://www.growthhack.com.br">GrowthHack.com.br</a></p>
-            <a target="_blank" href="ecommerce-genome/index.html"><img src="ecommerce-genome/img/book1.png" width="70%" style="margin-bottom: -50px; padding-left: 40px"></a>
+            <a target="_blank" id="amazonButton" href="ecommerce-genome/index.html"><img src="ecommerce-genome/img/book1.png" width="70%" style="margin-bottom: -50px; padding-left: 40px"></a>
+            <script type="text/javascript">
+              $('#$amazonButton').click(function() {
+                fbq('track', 'Click Through Amazon');
+                ga('send', 'event', 'Click', 'Click CTA', 'Click Through Amazon');
+              });
+            </script>
             <p style="text-align: center; font-size: 14px;">Available now</p>
           </div><!-- .col-md-3 -->
           <div class="col-md-6">
