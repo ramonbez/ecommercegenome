@@ -35,7 +35,7 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
@@ -1928,7 +1928,11 @@
           <p class="subtitle-white">Get your copy today<br><br><a id="amazonButton" href="https://www.amazon.com/Ecommerce-Genome-Practical-Launching-Optimizing-ebook/dp/B07QX31RHV/ref=sr_1_fkmrnull_1?keywords=ecommerce+genome&qid=1556221422&s=gateway&sr=8-1-fkmrnull" class="button form-button"><img src="img/logo-amazon.png" style="text-align: center; height: 40px"></a></p>
           <script type="text/javascript">
               $('#amazonButton').click(function() {
-                fbq('track', 'Click Through Amazon');
+                fbq('track', 'ViewContent', {
+                  content_name: 'Amazon Button',
+                  content_category: 'CTA',
+                  content_type: 'product',
+                 });
                 ga('send', 'event', 'Click', 'Click CTA', 'Click Through Amazon');
               });
           </script>
